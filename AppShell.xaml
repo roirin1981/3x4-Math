@@ -3,12 +3,68 @@
     x:Class="_3x4_Math.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:_3x4_Math"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:vm="clr-namespace:_3x4_Math.ViewModel"
+    xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+    xmlns:local="clr-namespace:_3x4_Math.Views" 
+    Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
+
+    <Shell.BindingContext>
+        <vm:MainPageViewModel />
+    </Shell.BindingContext>
+
+    <Shell.Resources>
+        <FontImageSource x:Key="IconHomeCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.HomeCircle}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="Iconlistbox" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ListBox}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="IconDatabaseArrowDown" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.DatabaseArrowDown}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="IconCog" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Cog}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="IconTune" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Tune}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="IconFileDocumentAlert" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.FileDocumentAlert}" Size="18" Color="#1d1d1d"/>
+        <FontImageSource x:Key="IconListStatus" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ListStatus}" Size="18" Color="#1d1d1d"/>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="White">
+            <Image Source="gijoe_img.png"></Image>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <!--<ShellContent Title="" ContentTemplate="{DataTemplate local:StartScreenView}" Route="StartScreenView" FlyoutItemIsVisible="false" />-->
+
+    <FlyoutItem Title="{helpers:Translate menuSheelLists}" Icon="{StaticResource Iconlistbox}" >
+        <ShellContent Title="Listado Personal" Icon="{StaticResource Iconlistbox}" ContentTemplate="{DataTemplate local:ListOfGIJoe}" Route="ListOfGIJoe"/>
+        <ShellContent Title="Listado Armas Faltan" Icon="{StaticResource IconListStatus}" ContentTemplate="{DataTemplate local:ListOfWeaponsMissedView}" Route="ListOfWeaponsMissedView"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Home" Icon="{StaticResource IconHomeCircle}" >
+        <ShellContent Title="Example" Icon="{StaticResource IconHomeCircle}" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+        <!--<ShellContent Title="Start Screen" ContentTemplate="{DataTemplate local:StartScreenView}" Route="StartScreenView"/>-->
+    </FlyoutItem>
+    <FlyoutItem Title="Ajustes" Icon="{StaticResource IconCog}">
+        <ShellContent Icon="{StaticResource IconDatabaseArrowDown}" Title="DataBase" ContentTemplate="{DataTemplate local:AdminDataBaseView}" Route="AdminDataBaseView"/>
+        <ShellContent Icon="{StaticResource IconTune}" Title="{helpers:Translate menuPreferencias}" ContentTemplate="{DataTemplate local:AdminPreferencesView}" Route="AdminPreferencesView"/>
+        <ShellContent Icon="{StaticResource IconFileDocumentAlert}" Title="Logs" ContentTemplate="{DataTemplate local:AdminLogView}" Route="AdminLogView"/>
+    </FlyoutItem>
+    <MenuItem Text="Theme"
+          Command="{Binding ThemeChangedCommand}"/>
+
+    <Shell.FlyoutFooter>
+        <Grid RowDefinitions="Auto,*" HeightRequest="150" BackgroundColor="White" HorizontalOptions="Center">
+            <Label Grid.Row="0" TextColor="DarkBlue" Text="Created by Hugo Velilla" HorizontalOptions="Center"></Label>
+            <Frame Grid.Row="1" HeightRequest="80" WidthRequest="80" CornerRadius="70" HorizontalOptions="Center" IsClippedToBounds="True" Padding="0" BorderColor="Orange" Margin="0,0,0,0">
+                <Image
+                Aspect="AspectFit"
+                Source="hugovelilla.jpg"
+                SemanticProperties.Description="Hugo Velilla"
+                HeightRequest="84"
+                WidthRequest="84"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            </Frame>
+        </Grid>
+    </Shell.FlyoutFooter>
 
 </Shell>
