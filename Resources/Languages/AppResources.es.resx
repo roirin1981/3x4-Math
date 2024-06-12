@@ -117,22 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="aciertos_" xml:space="preserve">
+    <value>Aciertos</value>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="btnResults" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="btnScore" xml:space="preserve">
+    <value>Puntuaciones</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="fallos_" xml:space="preserve">
+    <value>Fallos</value>
+  </data>
+  <data name="lblDeleteDataBase" xml:space="preserve">
+    <value>Borrar Base de Datos</value>
+  </data>
+  <data name="lblDeleteScore" xml:space="preserve">
+    <value>Eliminar puntuaciones</value>
+  </data>
   <data name="lblLimpiarPreferencias" xml:space="preserve">
     <value>Limpiar Preferencias</value>
+  </data>
+  <data name="lblListPesos" xml:space="preserve">
+    <value>Listado de pesos</value>
+  </data>
+  <data name="lblListStadistics" xml:space="preserve">
+    <value>Listado de puntaciones</value>
+  </data>
+  <data name="lblMultiMax" xml:space="preserve">
+    <value>Multiplicaciones máximas</value>
   </data>
   <data name="lblSelectLanguage" xml:space="preserve">
     <value>Selecciona el idioma</value>
   </data>
+  <data name="lblUserStadistics" xml:space="preserve">
+    <value>Estadísticas del usuario</value>
+  </data>
+  <data name="menuAjustes" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="menuLanguagePreferencias" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
   <data name="menuPreferencias" xml:space="preserve">
     <value>Preferencias</value>
   </data>
-  <data name="menuSheelListPersonal" xml:space="preserve">
-    <value>Listado Personal</value>
+  <data name="menuSheelList3x4Principal" xml:space="preserve">
+    <value>Juego</value>
   </data>
   <data name="menuSheelLists" xml:space="preserve">
     <value>Listados 2</value>
   </data>
   <data name="menuSheelListWeaponsMissed" xml:space="preserve">
     <value>Listado Armas Faltan</value>
+  </data>
+  <data name="messageWelcome" xml:space="preserve">
+    <value>Gracias por utilitzar el juego TresX4</value>
+  </data>
+  <data name="name?" xml:space="preserve">
+    <value>¿Nombre?</value>
+  </data>
+  <data name="puntuation" xml:space="preserve">
+    <value>Puntuación</value>
   </data>
 </root>

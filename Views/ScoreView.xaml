@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             x:Class="_3x4_Math.Views.ScoreView"
+             BackgroundColor="#EBF6FF"
+                Title="{helpers:Translate btnScore}">
+
+    <!--Shell.NavBarIsVisible="False"-->
+    <ContentPage.Resources>
+        <FontImageSource x:Key="GamepadVariantOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.GamepadVariantOutline}" Size="35" Color="#ffffff"/>
+        <FontImageSource x:Key="ArrowDownBoldCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ArrowDownBoldCircle}" Color="#ffffff"/>
+    </ContentPage.Resources>
+
+
+    <Grid RowSpacing="10" RowDefinitions="Auto,*" Padding="10">
+
+        <Label Grid.Row="0" Grid.Column="0" Text="{helpers:Translate lblListStadistics}" FontSize="24"/>
+        <ListView Margin="0,10,0,10" Grid.Row="1" ItemsSource="{Binding Items}"                 
+                HasUnevenRows="True" VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" SeparatorColor="#062026">           
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        <HorizontalStackLayout Padding="10,10,10,0" Spacing="5" HorizontalOptions="StartAndExpand"  VerticalOptions="Center" HeightRequest="50">
+                            <Label Text="{Binding Id}" FontAttributes="Bold" WidthRequest="50" FontSize="18" VerticalOptions="Center"/>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" WidthRequest="80" FontSize="18" VerticalOptions="Center"/>
+                            <Label Text="{Binding Time}" FontAttributes="Bold" WidthRequest="50" FontSize="18" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>                          
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+</ContentPage>

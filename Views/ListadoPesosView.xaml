@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             x:Class="_3x4_Math.Views.ListadoPesosView"
+             Title="Llistat de pessos">
+
+    <!--Shell.NavBarIsVisible="False"-->
+    <ContentPage.Resources>
+        <FontImageSource x:Key="GamepadVariantOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.GamepadVariantOutline}" Size="35" Color="#ffffff"/>
+        <FontImageSource x:Key="ArrowDownBoldCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ArrowDownBoldCircle}" Color="#ffffff"/>
+    </ContentPage.Resources>
+
+    <!--<ScrollView>
+        <Grid RowSpacing="10" RowDefinitions="Auto,Auto" Padding="10">
+            <Label Grid.Row="0" Grid.Column="0" Text="Listado de puntaciones"/>
+
+            <ur:DataGrid Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Items}" UseAutoColumns="True" HorizontalOptions="Center">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" Margin="40" />               
+            </ur:DataGrid>
+
+        </Grid>
+    </ScrollView>-->
+    <StackLayout>
+        <!-- Header -->
+        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Multi" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+            <Label Text="Historial" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Peso" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
+            <Label Text="Aciertos" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+            <Label Text="Fallos" FontAttributes="Bold" Grid.Row="0" Grid.Column="4" />
+            <Label Text="Valance" FontAttributes="Bold" Grid.Row="0" Grid.Column="5" />
+        </Grid>
+
+        <!-- ListView -->
+        <CollectionView ItemsSource="{Binding Items}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnSpacing="1" RowSpacing="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="{Binding Res}" Grid.Row="0" Grid.Column="0" />
+                        <Label Text="{Binding Array}" Grid.Row="0" Grid.Column="1" />
+                        <Label Text="{Binding CalculoPeso}" Grid.Row="0" Grid.Column="2" />
+                        <Label Text="{Binding Aciertos}" Grid.Row="0" Grid.Column="3" />
+                        <Label Text="{Binding Fallos}" Grid.Row="0" Grid.Column="4" />
+                        <Label Text="{Binding Valance}" Grid.Row="0" Grid.Column="5" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

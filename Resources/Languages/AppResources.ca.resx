@@ -117,22 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="accept" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="aciertos_" xml:space="preserve">
+    <value>Encerts</value>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Tancar</value>
+  </data>
+  <data name="btnResults" xml:space="preserve">
+    <value>Estadístiques</value>
+  </data>
+  <data name="btnScore" xml:space="preserve">
+    <value>Puntuacions</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="fallos_" xml:space="preserve">
+    <value>Errades</value>
+  </data>
+  <data name="lblDeleteDataBase" xml:space="preserve">
+    <value>Esborrar Base de Dades</value>
+  </data>
+  <data name="lblDeleteScore" xml:space="preserve">
+    <value>Eliminar puntuacions</value>
+  </data>
   <data name="lblLimpiarPreferencias" xml:space="preserve">
-    <value>Netejar Preferencias</value>
+    <value>Netejar Preferències</value>
+  </data>
+  <data name="lblListPesos" xml:space="preserve">
+    <value>Llistat de pesos</value>
+  </data>
+  <data name="lblListStadistics" xml:space="preserve">
+    <value>Llistat de puntuacions</value>
+  </data>
+  <data name="lblMultiMax" xml:space="preserve">
+    <value>Multiplicacions màximes</value>
   </data>
   <data name="lblSelectLanguage" xml:space="preserve">
     <value>Selecciona l'idioma</value>
   </data>
-  <data name="menuPreferencias" xml:space="preserve">
-    <value>Preferencies</value>
+  <data name="lblUserStadistics" xml:space="preserve">
+    <value>Estadístiques de l'usuari</value>
   </data>
-  <data name="menuSheelListPersonal" xml:space="preserve">
-    <value>Llistat Personal</value>
+  <data name="menuAjustes" xml:space="preserve">
+    <value>Ajustos</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="menuLanguagePreferencias" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="menuPreferencias" xml:space="preserve">
+    <value>Preferències</value>
+  </data>
+  <data name="menuSheelList3x4Principal" xml:space="preserve">
+    <value>Joc</value>
   </data>
   <data name="menuSheelLists" xml:space="preserve">
     <value>Llistat</value>
   </data>
   <data name="menuSheelListWeaponsMissed" xml:space="preserve">
     <value>Llistat Armes Falten</value>
+  </data>
+  <data name="messageWelcome" xml:space="preserve">
+    <value>Gràcies per utilitzar el joc TresX4</value>
+  </data>
+  <data name="name?" xml:space="preserve">
+    <value>Nom?</value>
+  </data>
+  <data name="puntuation" xml:space="preserve">
+    <value>Puntuació</value>
   </data>
 </root>

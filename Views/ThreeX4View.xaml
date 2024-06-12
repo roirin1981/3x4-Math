@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3x4_Math.Views.ThreeX4View"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             Title="{helpers:Translate menuSheelList3x4Principal}"
+             BackgroundColor="#EBF6FF">
+    <ContentPage.Resources>
+        <FontImageSource x:Key="Iconmagnify" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Magnify}" Size="18" Color="#1d1d1d"/>
+        <!--<helpers:BoolToFontAttributesConverter x:Key="BoolToFontAttributesConverter"/>-->
+    </ContentPage.Resources>
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*" Padding="10,20,5,10">
+        <StackLayout Grid.Row="0" HorizontalOptions="Center">
+            
+            <Grid RowDefinitions="Auto" ColumnDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="5" RowSpacing="5" Padding="10,0,5,0">
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Message2}" FontSize="30" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Resulted}" TextColor="{Binding ResultedColor}" FontSize="30" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="2" FontFamily="MaterialDesignIcons" VerticalTextAlignment="Center" IsVisible="{Binding IsVisibleTick}" Text="{x:Static helpers:IconFont.CheckOutline}" TextColor="Green" FontSize="30" HorizontalOptions="Start"/>
+                <Label Grid.Row="0" Grid.Column="3" FontFamily="MaterialDesignIcons" VerticalTextAlignment="Center"  IsVisible="{Binding IsVisibleFail}" Text="{x:Static helpers:IconFont.AlertBoxOutline}" TextColor="Red" FontSize="30" HorizontalOptions="Start"/>
+                <!--TextColor="{Binding ResultColor}" FontAttributes="{Binding IsResultBold, Converter={StaticResource BoolToFontAttributesConverter}}"/>-->
+            </Grid>
+            <Frame CornerRadius="5" HasShadow="False" Margin="10,0,10,0" Padding="0,0,0,0" BackgroundColor="#f9f9f9">
+                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto,*" ColumnSpacing="10" Padding="10,5,10,5">
+                    <Label Grid.Row="0" Grid.Column="0" FontSize="Title" TextColor="Green" Text="{helpers:Translate aciertos_}" VerticalOptions="Center"/>
+                    <Label Grid.Row="0" Grid.Column="1" FontSize="Title" TextColor="Green" Text="{Binding NumMultOk}" VerticalOptions="Center"/>
+                    <Label Grid.Row="1" Grid.Column="0" FontSize="Title" TextColor="#FF5733" Text="{helpers:Translate fallos_}" VerticalOptions="Center"/>
+                    <Label Grid.Row="1" Grid.Column="1" FontSize="Title" TextColor="#FF5733" Text="{Binding NumFallos}" VerticalOptions="Center"/>
+                    <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="{Binding TimeElapsed}" FontSize="20" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+            </Frame>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="5" RowSpacing="5" Padding="10,10,5,0">
+                <Button Grid.Row="0" Grid.Column="0" CommandParameter="1" Command="{Binding ChangeMenuCommand}" Text="1" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="0" Grid.Column="1" CommandParameter="2" Command="{Binding ChangeMenuCommand}" Text="2" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="0" Grid.Column="2" CommandParameter="3" Command="{Binding ChangeMenuCommand}" Text="3" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="1" Grid.Column="0" CommandParameter="4" Command="{Binding ChangeMenuCommand}" Text="4" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="1" Grid.Column="1" CommandParameter="5" Command="{Binding ChangeMenuCommand}" Text="5" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="1" Grid.Column="2" CommandParameter="6" Command="{Binding ChangeMenuCommand}" Text="6" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="2" Grid.Column="0" CommandParameter="7" Command="{Binding ChangeMenuCommand}" Text="7" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="2" Grid.Column="1" CommandParameter="8" Command="{Binding ChangeMenuCommand}" Text="8" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="2" Grid.Column="2" CommandParameter="9" Command="{Binding ChangeMenuCommand}" Text="9" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" CommandParameter="0" Command="{Binding ChangeMenuCommand}" Text="0" FontSize="30" VerticalOptions="End" WidthRequest="210" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button Grid.Row="3" Grid.Column="2" CommandParameter="&lt;" Command="{Binding RemoveCharacterCommand}" Text="&lt;" VerticalOptions="End" WidthRequest="100" HeightRequest="100" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
+                <Button Grid.Row="4" Grid.ColumnSpan="3" CommandParameter="OK" Command="{Binding VeriyfyMultiplicationCommand}" Margin="0,10,0,0" Text="Comprobar" VerticalOptions="End" WidthRequest="320" HeightRequest="80" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
+                <!--<Label Grid.Row="4" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="{Binding TimeElapsed}" FontSize="Large" HorizontalOptions="FillAndExpand"/>-->
+            </Grid>
+            
+        </StackLayout>
+
+        
+    </Grid>
+</ContentPage>

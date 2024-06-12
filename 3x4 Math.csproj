@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net8.0-maccatalyst;net8.0-ios;net8.0-android</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>3x4 Math</ApplicationTitle>
+		<ApplicationTitle>TresX4</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname._3x4_math</ApplicationId>
@@ -32,10 +32,11 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\icon4.svg" Color="#5cb8ff" />
 
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+			<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splashtest4.svg" Color="#5cb8ff" Resize="true" />
+		<!-- Images -->
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -49,18 +50,85 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="MainPage.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="MainPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+	  <None Remove="Resources\Images\gijoe_img.png" />
+	  <None Remove="Resources\Images\hugovelilla.jpg" />
+	  <None Remove="Resources\Images\qrhugo.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.2" />
+		<PackageReference Include="UraniumUI.Dialogs.CommunityToolkit" Version="2.8.1" />
+		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.8.1" />
+		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.8.1" />
+		<PackageReference Include="UraniumUI.Material" Version="2.8.1" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\LanguagePreferencesView.xaml.cs">
+	    <DependentUpon>LanguagePreferencesView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ListadoPesosView.xaml.cs">
+	    <DependentUpon>ListadoPesosView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ResultsView.xaml.cs">
+	    <DependentUpon>ResultsView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ScoreView.xaml.cs">
+	    <DependentUpon>ScoreView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AdminPreferencesView.xaml.cs">
+	    <DependentUpon>AdminPreferencesView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ThreeX4View.xaml.cs">
+	    <DependentUpon>ThreeX4View.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\LanguagePreferencesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ListadoPesosView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ResultsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ScoreView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AdminPreferencesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\View3x4View3x4.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\StartScreenView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\AppIcon\captura.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="Resources\Splash\splash2.svg" Color="White" Resize="true" />
 	</ItemGroup>
 
 </Project>

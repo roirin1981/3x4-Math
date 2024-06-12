@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_3x4_Math.Views"        
+              xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             x:Class="_3x4_Math.Views.StartScreenView"
+              BackgroundColor="#5CB8FF"
+              Shell.NavBarIsVisible="False">
+
+    <StackLayout>
+       
+        <Grid RowSpacing="40" RowDefinitions="Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='40'}">
+
+            <Grid Grid.Row="0"  HeightRequest="100" BackgroundColor="#5CB8FF">
+                <Image Source="captura3.png"></Image>
+            </Grid>
+            
+            <Label Grid.Row="1" Text="{helpers:Translate messageWelcome}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="21" TextColor="White" HorizontalOptions="Center"/>
+            <Label Grid.Row="2" TextColor="black" Text="Created by Hugo Velilla" HorizontalOptions="Center"></Label>
+            <Button Grid.Row="3"  Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnClose}" VerticalOptions="End" 
+                    WidthRequest="300" HeightRequest="80" FontSize="35"
+                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+        </Grid>
+        
+        
+    </StackLayout>
+
+</ContentPage>

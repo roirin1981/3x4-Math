@@ -1,0 +1,95 @@
+Uranium UI - UserControls
+https://enisn-projects.io/docs/en/uranium/latest/
+
+https://www.youtube.com/watch?v=7SxdgdbOHBc
+
+/Create SVG
+https://svgedit.netlify.app/editor/index.html
+
+
+
+Servidor Grauito .NET Core & Others
+http://somee.com/doka/DOU/DOMP/DOWebSites/DOSiteFileManager.aspx?k1k3k5=%2bDrxMSIEeglEC9EyBRlCEN4VsOb3RcJew3Wtuou4q3U%3d
+
+'JSON DB de GiJoe
+http://www.hugovelilla.somee.com/GIJoeDB/dataDBGiJOE.json
+
+http://www.hugovelilla.somee.com/GIJoeDB/img/cobra_img.png 
+http://www.hugovelilla.somee.com/GIJoeDB/img/gijoe_img.png 
+
+'Compilar
+dotnet build -c Release -f net8.0-android -bl
+
+'Configuration file MAUI
+https://montemagno.com/dotnet-maui-appsettings-json-configuration/
+
+'MAUI ListView
+https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/listview?view=net-maui-7.0
+
+'MVVM MAUI
+https://learn.microsoft.com/es-es/dotnet/communitytoolkit/mvvm/generators/observableproperty?source=recommendations
+
+'Realy command MVVM
+https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand
+
+'MVVM Relay Command
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.toolkit.mvvm.input.relaycommand.notifycanexecutechanged?view=win-comm-toolkit-dotnet-7.1
+
+'Injection + MVVM
+https://www.youtube.com/watch?v=lK8FRcpUzIo
+
+'MAUI MVVM Navigation 
+https://www.youtube.com/watch?v=ddmZ6k1GIkM
+https://www.youtube.com/watch?v=pBh5SXVSwXw
+
+
+'SQL Lite
+https://www.youtube.com/watch?v=EitcH1aSivc
+https://learn.microsoft.com/en-us/training/modules/store-local-data/
+
+'Icons MAUI
+https://cedricgabrang.medium.com/custom-fonts-material-design-icons-in-net-maui-acf59c9f98fe
+https://pictogrammers.com/library/mdi/
+
+
+'Blog official Microsoft
+https://devblogs.microsoft.com/dotnet/
+
+'Create own UserControls
+https://www.youtube.com/watch?v=3Cd3amJ-qcw
+
+'Crear KEys apple
+https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api
+
+
+
+
+'Android de HUGO
+Settings->Additional Settings->Developer Options
+
+1) Turn ON Developer Options
+2) Turn ON USB Debugging
+3) Turn OFF MIUI optimization
+4) Turn ON Install via USB
+
+
+
+'Splash screen
+https://hotpot.ai/design/blank?reedit=true&id=Qs3sKTayYoo8_128_278
+
+'APIs
+
+- GIJoeActionFigureDatabaseAPI: https://gijoedatabase.com/api/
+- GIJoeApi: https://www.gijoeapi.com/
+- GIJoeFiguresAPI: https://gijoefigures.com/api/
+
+
+'Splash Screen
+https://vectr.com/design/editor/7ea08baa-09ed-4f02-8571-e729b752c38b
+128x128
+
+'Traducir ResX
+https://products.groupdocs.app/translation/ca/total/resx
+
+'Localization
+https://www.youtube.com/watch?app=desktop&v=cf4sXULR7os

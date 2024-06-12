@@ -3,18 +3,18 @@ using System.ComponentModel;
 
 namespace _3x4_Math.Views;
 
-public partial class MainPage : ContentPage
+public partial class ResultsView : ContentPage
 {
-   	public MainPage(MainPageViewModel vm)
+   	public ResultsView(ResultsViewModel vm)
 	{
 		InitializeComponent();
 		this.BindingContext = vm;
 	}
     protected override void OnAppearing()
     {
-        if (this.BindingContext is MainPageViewModel vm)
+        if (this.BindingContext is ResultsViewModel vm)
         {
-            vm.LoadDBFirstTime();
+            vm.LoadScores();
         }
     }
 

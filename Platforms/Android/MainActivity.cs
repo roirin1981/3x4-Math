@@ -7,5 +7,11 @@ namespace _3x4_Math
     [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
     public class MainActivity : MauiAppCompatActivity
     {
+        //protected override void OnCreate(Bundle? savedInstanceState)
+        //{
+        //    //Window.SetStatusBarColor(Android.Graphics.Color.Orange);
+        //    //Window.set
+        //    base.OnCreate(savedInstanceState);
+        //}
     }
 }

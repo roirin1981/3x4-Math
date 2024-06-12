@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             BackgroundColor="#EBF6FF"
+             x:Class="_3x4_Math.Views.AdminPreferencesView">
+
+    <!--Shell.NavBarIsVisible="False"-->
+    <ContentPage.Resources>
+        <FontImageSource x:Key="DeleteCircleOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.DeleteCircleOutline}" Size="35" Color="#000000"/>
+        <FontImageSource x:Key="Repeat" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Repeat}" Size="35" Color="#000000"/>
+        <FontImageSource x:Key="ArrowDownBoldCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ArrowDownBoldCircle}" Size="35" Color="#000000"/>
+        <FontImageSource x:Key="ListBoxOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ListBoxOutline}" Size="35" Color="#000000"/>
+        
+    </ContentPage.Resources>
+
+    <Grid Padding="0,40,0,0" HorizontalOptions="Center" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="Auto" RowSpacing="30">
+        <ur:PickerField Grid.Row="0" Grid.Column="0" Title="{helpers:Translate lblMultiMax}" ItemsSource="{Binding Items}" TitleColor="Black"
+             Icon="{StaticResource ArrowDownBoldCircle}" AllowClear="False" SelectedItem="{Binding SelectedItem}" TextColor="Black"/>
+
+        <Button Grid.Row="1" Grid.Column="0"                     
+            Command="{Binding ListadoPesosCommand}" Text="{helpers:Translate lblListPesos}" FontSize="15"
+            VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource ListBoxOutline}"
+                BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+
+        <Button Grid.Row="2" Grid.Column="0"                     
+                    Command="{Binding ClearScoreCommand}" Text="{helpers:Translate lblDeleteScore}" FontSize="15"
+                    VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource DeleteCircleOutline}"
+                BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+        
+        <Button Grid.Row="3" Grid.Column="0"                     
+                Command="{Binding DeleteDatabaseCommand}" Text="{helpers:Translate lblDeleteDataBase}" FontSize="15"
+                VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource DeleteCircleOutline}"
+                BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+        
+    </Grid>
+    <!--<StackLayout>
+       
+
+        --><!--<Grid RowSpacing="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="10">
+
+            --><!--<Button StyleClass="FilledButton" Grid.Row="0" Grid.Column="0" 
+                    CommandParameter="A" 
+                    Command="{Binding ChangeMenuCommand}" Text="Juego" FontSize="35"
+                    VerticalOptions="End" WidthRequest="200" HeightRequest="80" ImageSource="{StaticResource GamepadVariantOutline}">
+                
+            </Button>--><!--
+            
+        </Grid>--><!--        
+    </StackLayout>-->
+</ContentPage>

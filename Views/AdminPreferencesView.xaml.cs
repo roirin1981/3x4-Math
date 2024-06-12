@@ -3,16 +3,16 @@ using System.ComponentModel;
 
 namespace _3x4_Math.Views;
 
-public partial class MainPage : ContentPage
+public partial class AdminPreferencesView : ContentPage
 {
-   	public MainPage(MainPageViewModel vm)
+   	public AdminPreferencesView(AdminPreferencesViewModel vm)
 	{
 		InitializeComponent();
 		this.BindingContext = vm;
 	}
     protected override void OnAppearing()
     {
-        if (this.BindingContext is MainPageViewModel vm)
+        if (this.BindingContext is AdminPreferencesViewModel vm)
         {
             vm.LoadDBFirstTime();
         }

@@ -1,16 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
-             x:Class="_3x4_Math.Views.MainPage"
-                Title="Home">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             BackgroundColor="#EBF6FF"
+             x:Class="_3x4_Math.Views.MainPage">
 
     <!--Shell.NavBarIsVisible="False"-->
-
+    <ContentPage.Resources>
+        <FontImageSource x:Key="GamepadVariantOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.GamepadVariantOutline}" Size="60" Color="#000000"/>
+        <FontImageSource x:Key="ListBoxOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ListBoxOutline}" Size="35" Color="#000000"/>
+        <FontImageSource x:Key="Sigma" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Sigma}" Size="35" Color="#000000"/>
+    </ContentPage.Resources>
+    
+    
+    
     <ScrollView>
-        <Grid RowSpacing="10" RowDefinitions="Auto,Auto,Auto" Padding="10">
-            <Button Command="{Binding IncrementCounterCommand}" Text="Contar" Grid.Row="0"></Button>
-            <Label Text="{Binding Message2}" Grid.Row="1"/>
-            <Button Command="{Binding ShowMessageCommand}" Text="Mensaje" Grid.Row="2"></Button>
-        </Grid>
+        <Grid RowSpacing="40" RowDefinitions="Auto,Auto,Auto" Padding="0,40,0,0">
+
+            <Button StyleClass="FilledButton" Grid.Row="0" Grid.Column="0" 
+                    CommandParameter="A" 
+                    Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate menuSheelList3x4Principal}" FontSize="40"
+                    VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource GamepadVariantOutline}"
+                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+
+
+            <!--<Button Grid.Row="1" Grid.Column="0" CommandParameter="B" Command="{Binding ChangeMenuCommand}" Text="Duel" VerticalOptions="End" WidthRequest="200" HeightRequest="100"></Button>-->
+            
+            <Button StyleClass="FilledButton" Grid.Row="1" Grid.Column="0" 
+                    CommandParameter="C" 
+                    Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnScore}" FontSize="25"
+                    VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource ListBoxOutline}"
+                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+
+
+            <Button StyleClass="FilledButton" Grid.Row="2" Grid.Column="0" 
+                 CommandParameter="B" 
+                 Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnResults}" FontSize="25"
+                 VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource Sigma}"
+                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+
+            <!--<ur:TextField Grid.Row="3" Grid.Column="0" Title="Please enter..."></ur:TextField>
+            <Button Grid.Row="4" Grid.Column="0" StyleClass="FilledButton" Text="Filled Button" />-->
+
+            
+        </Grid>     
+        
+        
     </ScrollView>
+
+    
 </ContentPage>

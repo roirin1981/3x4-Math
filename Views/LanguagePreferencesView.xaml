@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             BackgroundColor="#EBF6FF"
+             x:Class="_3x4_Math.Views.LanguagePreferencesView" >
+             <!--BackgroundImageSource="wallpaper2.jpg"-->
+            
+
+    <!--Shell.NavBarIsVisible="False"-->
+    <ContentPage.Resources>
+        <FontImageSource x:Key="DeleteCircleOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.DeleteCircleOutline}" Size="35" Color="#ffffff"/>        
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" Padding="10,10,5,10">
+        <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="{helpers:Translate lblSelectLanguage}" VerticalOptions="Center"/>
+        <Picker Grid.Row="0" Grid.Column="1" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}"
+                ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Language}"/>
+
+        
+        <!--<Label Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Start" Text="{Binding Language.Name}" VerticalOptions="Center"/>-->
+    </Grid>
+    <!--<StackLayout>
+       
+
+        --><!--<Grid RowSpacing="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="10">
+
+            --><!--<Button StyleClass="FilledButton" Grid.Row="0" Grid.Column="0" 
+                    CommandParameter="A" 
+                    Command="{Binding ChangeMenuCommand}" Text="Juego" FontSize="35"
+                    VerticalOptions="End" WidthRequest="200" HeightRequest="80" ImageSource="{StaticResource GamepadVariantOutline}">
+                
+            </Button>--><!--
+            
+        </Grid>--><!--        
+    </StackLayout>-->
+</ContentPage>
