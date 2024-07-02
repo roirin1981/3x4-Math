@@ -33,7 +33,6 @@ public partial class MainPageViewModel : ObservableObject
         IsBusy = false;
         //Application.Current.MainPage.IsBusy = false;
     }
-
     public async void LoadDBFirstTime()
     {
                 ResultUpdateDB result = await App.RepositorySvc.LoadService_SaveDB();        

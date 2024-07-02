@@ -17,6 +17,5 @@ public partial class ListadoPesosView : ContentPage
             vm.LoadScores();
         }
     }
-
 }
 

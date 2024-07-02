@@ -14,7 +14,6 @@ public class ExceptionResult
     private string gFunct = "";
     private string gLocation = "";
     private string gTime = "";
-
     public ExceptionResult(Exception e)
     {
         try

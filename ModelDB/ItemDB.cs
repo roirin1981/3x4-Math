@@ -22,5 +22,4 @@ public class ItemDB
     [MaxLength(250)]
     public string Name { get; set; }
     public int SecondsElapsed { get; set; }
-
 }

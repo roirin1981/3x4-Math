@@ -19,7 +19,6 @@ public partial class ListadoPesosViewModel : ObservableObject
     {
         //LoadScores();
     }
-
     public async void LoadScores()
     {
         try
@@ -43,7 +42,6 @@ public partial class ListadoPesosViewModel : ObservableObject
             Excepcio.Excepcio.AddLog(ex);
         }
     }
-
     public ObservableCollection<Pesos> Items { get; } = new();
 
     public class Pesos
@@ -55,6 +53,5 @@ public partial class ListadoPesosViewModel : ObservableObject
         public string Array { get; set; }
         public string CalculoPeso { get; set; }
     }
-
 
 }

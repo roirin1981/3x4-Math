@@ -14,7 +14,6 @@ public class ImageSourceConverter : IValueConverter
         {
             return ImageSource.FromResource($"_3x4_Math.Images.{imageName}.png"); // Ajusta el nombre del espacio de nombres y el formato de la imagen según tu configuración
         }
-
         return null;
     }
 

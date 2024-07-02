@@ -9,12 +9,7 @@ namespace _3x4_Math.Excepcio;
 public static class Excepcio
 {
     public static int errorI = 0;
-    //public static void AddLog(string s)
-    //{
-    //    ErrorLogs.Add(errorI.ToString()+" : " + s + Environment.NewLine);
-    //    errorI += 1;
-    //}
-
+   
     public static void AddLog(Exception e)
     {
         ErrorLogs.Add(new ExceptionResult(e));

@@ -17,13 +17,11 @@ namespace _3x4_Math.ModelDB;
 public class ItemPesosMultiDB
 {
     [PrimaryKey, AutoIncrement]
-    public int ID { get; set; }
- 
+    public int ID { get; set; } 
     public int val1 { get; set; }
     public int val2 { get; set; }
     public int fallos { get; set; }
     public int aciertos { get; set; }
-
     public int valance { get; set; }
     public string ultimos { get; set; }
     public string Res { get; set; }

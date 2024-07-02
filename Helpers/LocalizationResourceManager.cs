@@ -15,7 +15,6 @@ public class LocalizationResourceManager : INotifyPropertyChanged
     {
         AppResources.Culture = CultureInfo.CurrentCulture;
     }
-
     public static LocalizationResourceManager Instance { get; } = new();
 
     public object this[string resourcekey]

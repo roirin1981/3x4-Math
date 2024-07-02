@@ -50,7 +50,6 @@ public partial class LanguagePreferencesViewModel : ObservableObject
 
     [ObservableProperty]
     Cultures language;
-
     partial void OnLanguageChanged(Cultures value)
     {
         if (value.Key == App.SettingsSvc.Language) return;
@@ -59,7 +58,6 @@ public partial class LanguagePreferencesViewModel : ObservableObject
 
         App.SettingsSvc.Language = value.Key;
     }
-
     public ObservableCollection<TableItem> Tables2 { get; set; }
 
     private void TableItem_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

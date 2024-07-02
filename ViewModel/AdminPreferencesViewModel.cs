@@ -20,8 +20,7 @@ public partial class AdminPreferencesViewModel : ObservableObject
     public AdminPreferencesViewModel()
     {
         try
-        {
-            
+        {           
 
             
         }

@@ -12,7 +12,6 @@ namespace _3x4_Math.Helpers;
 public class TranslateExtension : IMarkupExtension<BindingBase>
 {
     public string Name { get; set; }
-
     public BindingBase ProvideValue(IServiceProvider serviceProvider)
     {
         return new Binding

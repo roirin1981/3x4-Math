@@ -19,8 +19,7 @@ internal class AlertService : IAlertService
     {
         return Application.Current.MainPage.DisplayAlert(title, message, accept, cancel);
     }
-
-    
+      
 
 
     // ----- "Fire and forget" calls -----

@@ -52,7 +52,6 @@ public class AutoCalculator
         }
 
         _List.Add(res);
-
         return res;
     }
 

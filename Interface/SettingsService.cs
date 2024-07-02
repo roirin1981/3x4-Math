@@ -93,7 +93,6 @@ public partial class SettingsService
             }
         }
     }
-
     public string Language
     {
         get

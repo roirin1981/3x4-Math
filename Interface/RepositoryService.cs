@@ -20,7 +20,6 @@ public class RepositoryService : IRepositoryService
     {
         //SetupDatabase();
     }
-
     private async void Init()
     {
         try

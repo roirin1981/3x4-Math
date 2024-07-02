@@ -13,5 +13,4 @@ public class ResultUpdateDB
     public bool DeleteDB = false;
     public bool InserInDB = false;
     public string ErrorMsg = "";
-
 }

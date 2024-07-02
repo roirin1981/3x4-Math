@@ -39,7 +39,6 @@ public class IconConverter : IValueConverter
             //    Size = 12 // Puedes ajustar el tamaño si es necesario
             //};
         }
-
         return null;
     }
 
