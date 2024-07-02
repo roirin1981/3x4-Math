@@ -12,16 +12,42 @@
 
     <!--Shell.NavBarIsVisible="False"-->
     <ContentPage.Resources>
-        <FontImageSource x:Key="DeleteCircleOutline" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.DeleteCircleOutline}" Size="35" Color="#ffffff"/>        
+        <FontImageSource x:Key="ArrowDownBoldCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ArrowDownBoldCircle}" Size="35" Color="#000000"/>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" Padding="10,10,5,10">
-        <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="{helpers:Translate lblSelectLanguage}" VerticalOptions="Center"/>
-        <Picker Grid.Row="0" Grid.Column="1" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}"
-                ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Language}"/>
+    <Grid RowSpacing="10"  RowDefinitions="Auto,Auto,Auto,Auto" 
+          ColumnDefinitions="Auto" 
+          Padding="10,10,5,10">
+        <!--<Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="{helpers:Translate lblSelectLanguage}" VerticalOptions="Center"/>-->
+        <!--<Picker Grid.Row="0" Grid.Column="1" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}"
+                ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Language}"/>-->
 
-        
-        <!--<Label Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Start" Text="{Binding Language.Name}" VerticalOptions="Center"/>-->
+        <ur:PickerField Margin="10,10,10,0" Grid.Row="0" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}" TitleColor="Black"
+Icon="{StaticResource ArrowDownBoldCircle}" ItemDisplayBinding="{Binding Name}" AllowClear="False" SelectedItem="{Binding Language}" TextColor="Black"/>
+
+        <ur:PickerField Margin="10,10,10,0" Grid.Row="1" Title="{helpers:Translate lblMultiMax}" ItemsSource="{Binding Items}" TitleColor="Black"
+     Icon="{StaticResource ArrowDownBoldCircle}" AllowClear="False" SelectedItem="{Binding SelectedItem}" TextColor="Black"/>
+
+        <Label Grid.Row="2" Margin="10,20,10,0" HorizontalTextAlignment="Start" Text="Tablas Seleccionadas" VerticalOptions="Center"/>
+        <Frame Margin="10,0,10,0" StyleClass="PrimaryContainer" Grid.Row="3" BackgroundColor="#DEF0FF" >
+            <CollectionView Margin="0,0,0,0" ItemsSource="{Binding Tables2}" 
+            Grid.Row="1"            
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="FillAndExpand" 
+            SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" ColumnSpacing="5">
+                            <ur:CheckBox IsChecked="{Binding IsChecked}" Text="{Binding Name}"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
     </Grid>
     <!--<StackLayout>
        

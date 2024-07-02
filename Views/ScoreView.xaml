@@ -14,8 +14,29 @@
         <FontImageSource x:Key="ArrowDownBoldCircle" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.ArrowDownBoldCircle}" Color="#ffffff"/>
     </ContentPage.Resources>
 
-
     <Grid RowSpacing="10" RowDefinitions="Auto,*" Padding="10">
+        <Label Grid.Row="0" Grid.Column="0" Text="{helpers:Translate lblListStadistics}" FontSize="24"/>
+        <CollectionView Margin="10,10,10,20" Grid.Row="1" ItemsSource="{Binding Items}"               
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand" 
+                    SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="0,10,0,0" ColumnSpacing="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Id}" FontAttributes="Bold" WidthRequest="50"  FontSize="18" VerticalOptions="Center" />
+                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" Grid.Column="1" />
+                        <Label Text="{Binding Time}" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" Grid.Column="2" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+    <!--<Grid RowSpacing="10" RowDefinitions="Auto,*" Padding="10">
 
         <Label Grid.Row="0" Grid.Column="0" Text="{helpers:Translate lblListStadistics}" FontSize="24"/>
         <ListView Margin="0,10,0,10" Grid.Row="1" ItemsSource="{Binding Items}"                 
@@ -33,5 +54,5 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </Grid>
+        </Grid>-->
 </ContentPage>

@@ -67,6 +67,33 @@ public partial class SettingsService
         }
     }
 
+    public bool this[int i]
+    {
+        get
+        {
+            try
+            {
+                return Preferences.Get("Tabla" + i.ToString(), true);
+            }
+            catch (Exception ex)
+            {
+                Excepcio.Excepcio.AddLog(ex);
+                return true;
+            }
+        }
+        set
+        {
+            try
+            {
+                Preferences.Set("Tabla" + i.ToString(), value);
+            }
+            catch (Exception ex)
+            {
+                Excepcio.Excepcio.AddLog(ex);
+            }
+        }
+    }
+
     public string Language
     {
         get

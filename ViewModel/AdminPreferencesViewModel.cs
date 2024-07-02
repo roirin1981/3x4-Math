@@ -4,9 +4,14 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using UraniumUI.Material.Controls;
 
 namespace _3x4_Math.ViewModel;
 
@@ -16,14 +21,20 @@ public partial class AdminPreferencesViewModel : ObservableObject
     {
         try
         {
-            SelectedItem = Convert.ToString(App.SettingsSvc.NumQuestions);
+            
+
+            
         }
         catch (Exception ex)
         {
             Excepcio.Excepcio.AddLog(ex);
         }
     }
+
     
+
+    
+
     [RelayCommand]
     private async void ClearScore(string parameter)
     {
@@ -54,28 +65,14 @@ public partial class AdminPreferencesViewModel : ObservableObject
         Shell.Current.GoToAsync(nameof(ListadoPesosView));
     }
 
-    [ObservableProperty]
-    String[] items = new string[] {"5", "10", "20", "30", "40"};
-
-    [ObservableProperty]
-    String selectedItem = "30";
-
-    partial void OnSelectedItemChanged(string value)
-    {
-        try
-        {
-            App.SettingsSvc.NumQuestions = Convert.ToInt32(value);
-        }
-        catch (Exception ex)
-        {
-            Excepcio.Excepcio.AddLog(ex);
-        }
-    }
+    
 
     public async void LoadDBFirstTime()
     {
            
     }
 
-  
+
 }
+
+

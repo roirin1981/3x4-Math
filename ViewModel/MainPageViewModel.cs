@@ -15,7 +15,10 @@ public partial class MainPageViewModel : ObservableObject
     [RelayCommand]
     private void ChangeMenu(string parameter)
     {
-        switch(parameter)
+        IsBusy = true;
+        System.Threading.Thread.Sleep(250);
+        //Application.Current.MainPage.IsBusy = true;
+        switch (parameter)
         {
             case "A":
                 Shell.Current.GoToAsync(nameof(ThreeX4View));
@@ -27,10 +30,16 @@ public partial class MainPageViewModel : ObservableObject
                 Shell.Current.GoToAsync(nameof(ScoreView));
                 break;
         }
+        IsBusy = false;
+        //Application.Current.MainPage.IsBusy = false;
     }
 
     public async void LoadDBFirstTime()
     {
-        ResultUpdateDB result = await App.RepositorySvc.LoadService_SaveDB();        
+                ResultUpdateDB result = await App.RepositorySvc.LoadService_SaveDB();        
     }
+
+    [ObservableProperty]
+    private bool isBusy = false;
+
 }

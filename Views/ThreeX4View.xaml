@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_3x4_Math.Views.ThreeX4View"
              xmlns:helpers="clr-namespace:_3x4_Math.Helpers"
              Title="{helpers:Translate menuSheelList3x4Principal}"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              BackgroundColor="#EBF6FF">
     <ContentPage.Resources>
         <FontImageSource x:Key="Iconmagnify" FontFamily="MaterialDesignIcons" Glyph="{x:Static helpers:IconFont.Magnify}" Size="18" Color="#1d1d1d"/>
@@ -29,23 +31,55 @@
                 </Grid>
             </Frame>
             <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="5" RowSpacing="5" Padding="10,10,5,0">
-                <Button Grid.Row="0" Grid.Column="0" CommandParameter="1" Command="{Binding ChangeMenuCommand}" Text="1" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="0" Grid.Column="1" CommandParameter="2" Command="{Binding ChangeMenuCommand}" Text="2" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="0" Grid.Column="2" CommandParameter="3" Command="{Binding ChangeMenuCommand}" Text="3" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="1" Grid.Column="0" CommandParameter="4" Command="{Binding ChangeMenuCommand}" Text="4" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="1" Grid.Column="1" CommandParameter="5" Command="{Binding ChangeMenuCommand}" Text="5" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="1" Grid.Column="2" CommandParameter="6" Command="{Binding ChangeMenuCommand}" Text="6" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="2" Grid.Column="0" CommandParameter="7" Command="{Binding ChangeMenuCommand}" Text="7" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="2" Grid.Column="1" CommandParameter="8" Command="{Binding ChangeMenuCommand}" Text="8" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="2" Grid.Column="2" CommandParameter="9" Command="{Binding ChangeMenuCommand}" Text="9" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" CommandParameter="0" Command="{Binding ChangeMenuCommand}" Text="0" FontSize="30" VerticalOptions="End" WidthRequest="210" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
-                <Button Grid.Row="3" Grid.Column="2" CommandParameter="&lt;" Command="{Binding RemoveCharacterCommand}" Text="&lt;" VerticalOptions="End" WidthRequest="100" HeightRequest="100" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
-                <Button Grid.Row="4" Grid.ColumnSpan="3" CommandParameter="OK" Command="{Binding VeriyfyMultiplicationCommand}" Margin="0,10,0,0" Text="Comprobar" VerticalOptions="End" WidthRequest="320" HeightRequest="80" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="0" Grid.Column="0" CommandParameter="1" Command="{Binding ChangeMenuCommand}" Text="1" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="0" Grid.Column="1" CommandParameter="2" Command="{Binding ChangeMenuCommand}" Text="2" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="0" Grid.Column="2" CommandParameter="3" Command="{Binding ChangeMenuCommand}" Text="3" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="1" Grid.Column="0" CommandParameter="4" Command="{Binding ChangeMenuCommand}" Text="4" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="1" Grid.Column="1" CommandParameter="5" Command="{Binding ChangeMenuCommand}" Text="5" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="1" Grid.Column="2" CommandParameter="6" Command="{Binding ChangeMenuCommand}" Text="6" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="2" Grid.Column="0" CommandParameter="7" Command="{Binding ChangeMenuCommand}" Text="7" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="2" Grid.Column="1" CommandParameter="8" Command="{Binding ChangeMenuCommand}" Text="8" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="2" Grid.Column="2" CommandParameter="9" Command="{Binding ChangeMenuCommand}" Text="9" FontSize="30" VerticalOptions="End" WidthRequest="100" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" CommandParameter="0" Command="{Binding ChangeMenuCommand}" Text="0" FontSize="30" VerticalOptions="End" WidthRequest="210" HeightRequest="100" BackgroundColor="#42D6FF" BorderColor="LightGray" BorderWidth="2" TextColor="#062026"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="3" Grid.Column="2" CommandParameter="&lt;" Command="{Binding RemoveCharacterCommand}" Text="&lt;" VerticalOptions="End" WidthRequest="100" HeightRequest="100" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
+                <Button StyleClass="Elevation2" Grid.Row="4" Grid.ColumnSpan="3" CommandParameter="OK" Command="{Binding VeriyfyMultiplicationCommand}" Margin="0,10,0,0" Text="Comprobar" VerticalOptions="End" WidthRequest="320" HeightRequest="80" FontSize="30" BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
                 <!--<Label Grid.Row="4" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="{Binding TimeElapsed}" FontSize="Large" HorizontalOptions="FillAndExpand"/>-->
             </Grid>
-            
-        </StackLayout>
-
-        
+            <!--<Button Text="Show" Command="{Binding ShowHelpCommand}"/>-->
+        </StackLayout>        
     </Grid>
-</ContentPage>
+    <uranium:UraniumContentPage.Attachments>
+        <material:BottomSheetView IsPresented="{Binding VisibleHelp}" IsVisible="True" 
+                                  BackgroundColor="White">
+            <material:BottomSheetView.Header>
+                <!-- Bottom Sheet Header here-->
+                <Grid RowDefinitions="Auto" ColumnSpacing="10" ColumnDefinitions="Auto,Auto" 
+                      BackgroundColor="White" Padding="10">
+                    <Button Grid.Row="0" Grid.Column="0" ImageSource="{StaticResource Iconmagnify}" 
+                        Command="{Binding VisibleHelp}" VerticalOptions="Start"  WidthRequest="30" 
+                            HeightRequest="30" FontSize="20" BackgroundColor="#42D6FF" 
+                            TextColor="#062026" BorderColor="LightGray" BorderWidth="2"></Button>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Ayuda" 
+                           FontSize="20" HorizontalOptions="End"  TextColor="Black"/>
+                    
+                </Grid>
+                
+            </material:BottomSheetView.Header>
+            <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="10" ColumnSpacing="10" ColumnDefinitions="Auto,Auto" 
+                      BackgroundColor="White" Padding="10" HorizontalOptions="Center">
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding BottomSheetView1}" FontSize="20" HorizontalOptions="End"  TextColor="Black"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding BottomSheetView2}" FontSize="20" HorizontalOptions="End"  TextColor="Black"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="{Binding BottomSheetView3}" FontSize="20" HorizontalOptions="End"  TextColor="Black"/>
+            </Grid>
+            <!--<TableView Intent="Menu" HorizontalOptions="Center">
+                <TableRoot>
+                    <TableSection Title="{Binding Num1, StringFormat='Tabla del: {0}'}" TextColor="Black">
+                        <TextCell Text="{Binding BottomSheetView1}" TextColor="Black" />
+                        <TextCell Text="{Binding BottomSheetView2}" TextColor="Black" />
+                        <TextCell Text="{Binding BottomSheetView3}" TextColor="Black" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>-->
+        </material:BottomSheetView>
+    </uranium:UraniumContentPage.Attachments>
+</uranium:UraniumContentPage>

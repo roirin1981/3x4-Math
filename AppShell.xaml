@@ -58,19 +58,26 @@
           Command="{Binding ThemeChangedCommand}"/>-->
   
     <Shell.FlyoutFooter>
-        <Grid RowDefinitions="Auto,*" HeightRequest="150" BackgroundColor="White" HorizontalOptions="Center">
-            <Frame Grid.Row="1" HeightRequest="80" WidthRequest="80" CornerRadius="5" HorizontalOptions="Center" 
-                   IsClippedToBounds="True" Padding="0" BorderColor="Orange" Margin="0,0,0,0">
+        <Grid RowDefinitions="Auto,*" ColumnDefinitions="Auto,Auto" RowSpacing="20" ColumnSpacing="50" HeightRequest="150" BackgroundColor="White" HorizontalOptions="Center">
+            <Image Grid.Row="0" Grid.Column="0" Source="linkedin2.png" WidthRequest="40" HeightRequest="40" BackgroundColor="White">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="1" Grid.Column="0" TextColor="#000000" Text="Hugo Velilla" VerticalTextAlignment="Start" HorizontalOptions="Center"></Label>
+            
+            <Frame Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" HeightRequest="80" WidthRequest="80" CornerRadius="5" VerticalOptions="Start" HorizontalOptions="Center" 
+                   IsClippedToBounds="True" Padding="0" BorderColor="Orange" Margin="0,0,0,0">                
                 <Image
                     Aspect="AspectFit"
-                    Source="qrhugo.png"
+                    Source="qrhugo2.png"
                     SemanticProperties.Description="Hugo Velilla"
                     HeightRequest="84"
                     WidthRequest="84"
                     VerticalOptions="Center"
                     HorizontalOptions="Center" />   
             </Frame>
-            <Label Grid.Row="0" TextColor="#000000" Text="Created by Hugo Velilla" HorizontalOptions="Center"></Label>            
+            
         </Grid>
     </Shell.FlyoutFooter>
 

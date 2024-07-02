@@ -16,39 +16,44 @@
     
     
     
-    <ScrollView>
-        <Grid RowSpacing="40" RowDefinitions="Auto,Auto,Auto" Padding="0,40,0,0">
-
-            <Button StyleClass="FilledButton" Grid.Row="0" Grid.Column="0" 
-                    CommandParameter="A" 
-                    Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate menuSheelList3x4Principal}" FontSize="40"
-                    VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource GamepadVariantOutline}"
-                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+    
+        <StackLayout>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Grid RowSpacing="40" RowDefinitions="Auto,Auto,Auto" Padding="0,40,0,0">
 
 
-            <!--<Button Grid.Row="1" Grid.Column="0" CommandParameter="B" Command="{Binding ChangeMenuCommand}" Text="Duel" VerticalOptions="End" WidthRequest="200" HeightRequest="100"></Button>-->
-            
-            <Button StyleClass="FilledButton" Grid.Row="1" Grid.Column="0" 
-                    CommandParameter="C" 
-                    Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnScore}" FontSize="25"
-                    VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource ListBoxOutline}"
-                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+                <Button StyleClass="FilledButton" Grid.Row="0" Grid.Column="0" 
+            CommandParameter="A" 
+            Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate menuSheelList3x4Principal}" FontSize="40"
+            VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource GamepadVariantOutline}"
+            BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
 
 
-            <Button StyleClass="FilledButton" Grid.Row="2" Grid.Column="0" 
-                 CommandParameter="B" 
-                 Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnResults}" FontSize="25"
-                 VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource Sigma}"
-                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+                <!--<Button Grid.Row="1" Grid.Column="0" CommandParameter="B" Command="{Binding ChangeMenuCommand}" Text="Duel" VerticalOptions="End" WidthRequest="200" HeightRequest="100"></Button>-->
 
-            <!--<ur:TextField Grid.Row="3" Grid.Column="0" Title="Please enter..."></ur:TextField>
-            <Button Grid.Row="4" Grid.Column="0" StyleClass="FilledButton" Text="Filled Button" />-->
+                <Button StyleClass="FilledButton" Grid.Row="1" Grid.Column="0" 
+            CommandParameter="C" 
+            Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnScore}" FontSize="25"
+            VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource ListBoxOutline}"
+            BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
 
-            
-        </Grid>     
+
+                <Button StyleClass="FilledButton" Grid.Row="2" Grid.Column="0" 
+         CommandParameter="B" 
+         Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnResults}" FontSize="25"
+         VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource Sigma}"
+            BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+
+                <!--<ur:TextField Grid.Row="3" Grid.Column="0" Title="Please enter..."></ur:TextField>
+    <Button Grid.Row="4" Grid.Column="0" StyleClass="FilledButton" Text="Filled Button" />-->
+
+
+            </Grid>
+
+        </StackLayout>
         
         
-    </ScrollView>
+    
 
     
 </ContentPage>

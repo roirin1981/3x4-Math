@@ -93,3 +93,11 @@ https://products.groupdocs.app/translation/ca/total/resx
 
 'Localization
 https://www.youtube.com/watch?app=desktop&v=cf4sXULR7os
+
+Generador QR
+	https://go.bidiqr.com/
+	https://drive.google.com/file/d/14huwMcNGoUmUua9wTygkO7X94wcOjQtE/view?usp=drive_link
+	#5cb8ff
+
+
+

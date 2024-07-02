@@ -9,6 +9,7 @@ using _3x4_Math.Views;
 using static SQLite.SQLite3;
 using _3x4_Math.ModelDB;
 using _3x4_Math.Helpers;
+using System.Runtime.CompilerServices;
 
 namespace _3x4_Math.ViewModel
 {
@@ -87,6 +88,24 @@ namespace _3x4_Math.ViewModel
 
         private bool isEnterInFunction = false;
 
+        [ObservableProperty]
+        private bool visibleHelp = false;
+
+        [ObservableProperty]
+        private string bottomSheetView1 = "";
+
+        [ObservableProperty]
+        private string bottomSheetView2 = "";
+
+        [ObservableProperty]
+        private string bottomSheetView3 = "";
+
+        [RelayCommand]
+        private void ShowHelp()
+        {
+            VisibleHelp = !visibleHelp;
+        }
+
         [RelayCommand]
         private async void VeriyfyMultiplication(string parameter)
         {
@@ -119,6 +138,7 @@ namespace _3x4_Math.ViewModel
 
                 if (NumMultOk == App.SettingsSvc.NumQuestions)
                 {
+                    timer.Stop();
                     int timeElapsed = secondsElapsed;
                     //Title = "{helpers:Translate menuPreferencias}"
                     string _puntuation = (string)Helpers.LocalizationResourceManager.Instance["puntuation"];
@@ -210,6 +230,35 @@ namespace _3x4_Math.ViewModel
             //    Num2 = _random.Next(1, 10); // Genera un número aleatorio entre 1 y 9
             //}
             Message2 = $"{Num1} x {Num2} =";
+            CreateBottomSheetView();
+        }
+
+        private void CreateBottomSheetView()
+        {
+            List<string> text1 = new List<string>();
+            for (int i = 1; i <= 3; i++)
+            {
+               
+                text1.Add(Num1.ToString()+"x"+i.ToString()+"="+Convert.ToString(Num1 * i));
+               
+            }
+            BottomSheetView1 = string.Join("   ",text1);
+            text1.Clear();
+            for (int i = 4; i <= 6; i++)
+            {
+
+                text1.Add(Num1.ToString() + "x" + i.ToString() + "=" + Convert.ToString(Num1 * i));
+
+            }
+            BottomSheetView2 = string.Join("   ", text1);
+            text1.Clear();
+            for (int i = 7; i <= 9; i++)
+            {
+
+                text1.Add(Num1.ToString() + "x" + i.ToString() + "=" + Convert.ToString(Num1 * i));
+
+            }
+            BottomSheetView3 = string.Join("   ", text1);
         }
 
         private void InitializeTimer()

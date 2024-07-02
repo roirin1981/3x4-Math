@@ -169,10 +169,10 @@
     <value>Principal</value>
   </data>
   <data name="menuLanguagePreferencias" xml:space="preserve">
-    <value>Idioma</value>
+    <value>Ajustos</value>
   </data>
   <data name="menuPreferencias" xml:space="preserve">
-    <value>Preferències</value>
+    <value>Administració</value>
   </data>
   <data name="menuSheelList3x4Principal" xml:space="preserve">
     <value>Joc</value>

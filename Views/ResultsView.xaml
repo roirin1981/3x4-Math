@@ -19,28 +19,37 @@
     </ContentPage.Resources>
 
     <!--<ScrollView>-->
-        <Grid RowSpacing="10" RowDefinitions="Auto,*" Padding="10">
+    <Grid RowSpacing="10" RowDefinitions="Auto,*" Padding="10">
         <Label Grid.Row="0" Grid.Column="0" Text="{helpers:Translate lblUserStadistics}" FontSize="24"/>
-
-            <ListView Margin="0,10,0,10" Grid.Row="1" ItemsSource="{Binding Caracters}"               
-              HasUnevenRows="True" VerticalOptions="FillAndExpand" 
-              HorizontalOptions="FillAndExpand" SeparatorColor="Black"> 
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                           
-                            <HorizontalStackLayout Padding="10,10,10,0" Spacing="5" HorizontalOptions="StartAndExpand"  VerticalOptions="Center" HeightRequest="50">
-                                <Label Text="{Binding Res}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Start" WidthRequest="100" VerticalOptions="Center"/>
-                                <Image Source="{Binding ., Converter={StaticResource IconConverter}}" WidthRequest="30" />
-                                <Label Text="    "/>
-                                <Label Text="{Binding Percent}" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" WidthRequest="100"/>
-                            </HorizontalStackLayout>
-                           
-                            
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <CollectionView Margin="10,10,10,20" Grid.Row="1" ItemsSource="{Binding Caracters}"               
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand" 
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="0,10,0,0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Res}" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" />
+                        <Image Source="{Binding ., Converter={StaticResource IconConverter}}" WidthRequest="25" Grid.Column="1" />
+                        <Label Text="{Binding Percent}" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" Grid.Column="2" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid BackgroundColor="#80000000"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              IsVisible="{Binding IsBusy}">
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               Color="White" />
         </Grid>
+    </Grid>
+    
     <!--</ScrollView>-->
 </ContentPage>

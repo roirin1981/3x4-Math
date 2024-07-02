@@ -19,29 +19,32 @@ public partial class ResultsViewModel : ObservableObject
 {
     public ResultsViewModel()
     {
-        //LoadScores();
     }
 
     [ObservableProperty]
     private ItemPesosMultiDB[] caracters;
 
-    public async void LoadScores()
+    [ObservableProperty]
+    private bool isBusy = false;
+
+    public async Task LoadScores()
     {
         try
         {
-            //Items.Clear();
+            IsBusy = true;
             List<ItemPesosMultiDB> res2 = await App.RepositorySvc.GetAllPesosItems();
-            Caracters = res2.ToArray();            
+            Caracters = res2.ToArray();
         }
         catch (Exception ex)
         {
+            // Manejo de excepciones
             Excepcio.Excepcio.AddLog(ex);
         }
+        finally
+        {
+            IsBusy = false;
+        }
     }
-
-    //public ObservableCollection<Puntuation> Items { get; } = new();
-
-    
 
 
 }

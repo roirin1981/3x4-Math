@@ -35,7 +35,15 @@ public partial class AppShell : Shell
         //}
     }
 
-    
+    private void OnImageTapped(object sender, EventArgs e)
+    {
+        // URL que quieres abrir
+        string url = "https://www.linkedin.com/in/hugo-velilla-349b9831/";
+
+        // Abre el navegador web
+        Launcher.OpenAsync(new Uri(url));
+    }
+
 
 }
 

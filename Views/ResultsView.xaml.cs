@@ -10,13 +10,25 @@ public partial class ResultsView : ContentPage
 		InitializeComponent();
 		this.BindingContext = vm;
 	}
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
+        base.OnAppearing();
+        
         if (this.BindingContext is ResultsViewModel vm)
         {
-            vm.LoadScores();
+            await Task.Yield(); // Permite que la UI se actualice primero
+            //await vm.LoadScores();
+            _ = LoadDataAsync(vm);
         }
     }
+
+    private async Task LoadDataAsync(ResultsViewModel vm)
+    {
+     
+        await vm.LoadScores();
+    }
+
+
 
 }
 

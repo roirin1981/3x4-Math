@@ -64,8 +64,8 @@ public class RepositoryService : IRepositoryService
                     /*Constante*/
                     val1 = Num1,
                     val2 = Num2,
-                    Res = Num1 + " X " + Num2 + " = " + Convert.ToString(Num1 * Num2),
-                    
+                    Res = Num1 + " X " + Num2 + " = " + Convert.ToString(Num1 * Num2),                    
+
                     /*Aciertos-Fallos*/
                     aciertos = (val) ? 1 : 0,
                     fallos = (val) ? 0 : 1,
@@ -102,7 +102,7 @@ public class RepositoryService : IRepositoryService
             }
         }
         double porcentajeAciertos = (double)aciertos / o.ultimos.Length * 100;
-        o.Percent = $"{(int)Math.Round(porcentajeAciertos)}%";
+        o.Percent = $"{(int)Math.Round(porcentajeAciertos)}% - {o.aciertos.ToString()}/{Convert.ToString(o.aciertos + o.fallos)}";
         switch (porcentajeAciertos)
         {
             case 100:
@@ -193,6 +193,22 @@ public class RepositoryService : IRepositoryService
             ret = ret.OrderByDescending(item => item.CalcularPuntaje).ToList();
             if (ret.Count == 0) return new ItemPesosMultiDB();
             if (ret[0].CalcularPuntaje == 0) return new ItemPesosMultiDB();
+
+            //Valores disponibles
+            List<int> possibleValues = new List<int>();
+            // Iterar sobre los índices para obtener los valores almacenados en preferencias
+            for (int i = 1; i <= 9; i++)  // Asegúrate de ajustar MAX_INDEX según tus necesidades
+            {
+                if (App.SettingsSvc[i])  // Accede a la propiedad indexada para verificar si es verdadero
+                {
+                    possibleValues.Add(i);
+                }
+            }
+            if (!possibleValues.Exists(x => x == ret[0].val1))
+            {
+                return new ItemPesosMultiDB();
+            }
+
             int val = ret[0].CalcularPuntaje;
             return ret[0];
         }
@@ -226,7 +242,7 @@ public class RepositoryService : IRepositoryService
         try {
             res.ErrorMsg = "";
             res.InserInDB = true;
-            //Init();
+            Init();
             //List<ItemDB> ret = await conn.Table<ItemDB>().ToListAsync();
             return res;
         }
