@@ -103,3 +103,6 @@ Generador QR
 
 Solventar problema GITHub al subir
 git config --global http.sslBackend schannel
+
+Crear ReadMe
+https://readme.so/editor
