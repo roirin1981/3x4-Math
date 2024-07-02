@@ -4,7 +4,7 @@ Aplicación para niños de 8 años que acaban de aprender las tablas de multiplicar
 
 ## Instalador
 
-Instale my proyecto directamente de Google Drive
+Instale mi proyecto directamente de Google Drive
 
 [TresX4 Download](https://drive.google.com/file/d/14huwMcNGoUmUua9wTygkO7X94wcOjQtE/view?usp=drive_link)
 
