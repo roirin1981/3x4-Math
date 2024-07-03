@@ -135,6 +135,21 @@
   <data name="cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="comprobar_" xml:space="preserve">
+    <value>Comprobar</value>
+  </data>
+  <data name="correctamente_" xml:space="preserve">
+    <value>Correctamente.</value>
+  </data>
+  <data name="eliminateDB_" xml:space="preserve">
+    <value>Eliminada base de datos</value>
+  </data>
+  <data name="eliminateScore_" xml:space="preserve">
+    <value>Eliminada las puntuaciones</value>
+  </data>
+  <data name="error_" xml:space="preserve">
+    <value>Error.</value>
+  </data>
   <data name="fallos_" xml:space="preserve">
     <value>Fallos</value>
   </data>
@@ -191,5 +206,11 @@
   </data>
   <data name="puntuation" xml:space="preserve">
     <value>Puntuación</value>
+  </data>
+  <data name="tablesSeleccionades" xml:space="preserve">
+    <value>Tablas seleccionadas</value>
+  </data>
+  <data name="table_" xml:space="preserve">
+    <value>Tabla</value>
   </data>
 </root>

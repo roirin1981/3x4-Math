@@ -46,7 +46,7 @@ public partial class SettingsService
         {
             try
             {
-                return Preferences.Get("NumQuestions", 30);
+                return Preferences.Get("NumQuestions", 10);
             }
             catch (Exception ex)
             {

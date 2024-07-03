@@ -38,24 +38,32 @@ public partial class AdminPreferencesViewModel : ObservableObject
     private async void ClearScore(string parameter)
     {
         bool res2 = await App.RepositorySvc.ClearScores();
-        if(res2) App.AlertSvc.ShowAlert("Eliminada las puntuaciones", "Correctamente.");
-        else App.AlertSvc.ShowAlert("Eliminada las puntuaciones", "Error al eliminar las puntuaciones.");
+        string _eliminateScore = (string)Helpers.LocalizationResourceManager.Instance["eliminateScore_"];
+        string _correctamente = (string)Helpers.LocalizationResourceManager.Instance["correctamente_"];        
+        string _error = (string)Helpers.LocalizationResourceManager.Instance["error_"];
+        if (res2) App.AlertSvc.ShowAlert(_eliminateScore, _correctamente);
+        else App.AlertSvc.ShowAlert(_eliminateScore, _error);
     }
 
     [RelayCommand]
     private async void ClearListadoPesos()
     {
         bool res2 = await App.RepositorySvc.ClearItemsPesos();
-        if (res2) App.AlertSvc.ShowAlert("Eliminada listado pesos", "Correctamente.");
-        else App.AlertSvc.ShowAlert("Eliminada listado pesos", "Error al eliminar las puntuaciones.");
+        string _correctamente = (string)Helpers.LocalizationResourceManager.Instance["correctamente_"];
+        string _error = (string)Helpers.LocalizationResourceManager.Instance["error_"];
+        if (res2) App.AlertSvc.ShowAlert("Eliminada listado pesos", _correctamente);
+        else App.AlertSvc.ShowAlert("Eliminada listado pesos", _error);
     }
 
     [RelayCommand]
     private async void DeleteDatabase()
     {
+        string _eliminateDB = (string)Helpers.LocalizationResourceManager.Instance["eliminateDB_"];
+        string _correctamente = (string)Helpers.LocalizationResourceManager.Instance["correctamente_"];
+        string _error = (string)Helpers.LocalizationResourceManager.Instance["error_"];
         bool res2 = await App.RepositorySvc.DeleteDataBase();
-        if (res2) App.AlertSvc.ShowAlert("Eliminada base de datos", "Correctamente.");
-        else App.AlertSvc.ShowAlert("Eliminada base de datos", "Error al eliminar las puntuaciones.");
+        if (res2) App.AlertSvc.ShowAlert(_eliminateDB, _correctamente);
+        else App.AlertSvc.ShowAlert(_eliminateDB, _error);
     }
 
     [RelayCommand]

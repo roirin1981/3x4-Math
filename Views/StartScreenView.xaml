@@ -17,10 +17,10 @@
             </Grid>
             
             <Label Grid.Row="1" Text="{helpers:Translate messageWelcome}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="21" TextColor="White" HorizontalOptions="Center"/>
-            <Label Grid.Row="2" TextColor="black" Text="Created by Hugo Velilla" HorizontalOptions="Center"></Label>
+            <!--<Label Grid.Row="2" TextColor="black" Text="Created by Hugo Velilla" HorizontalOptions="Center"></Label>-->
             <Button Grid.Row="3"  Command="{Binding ChangeMenuCommand}" Text="{helpers:Translate btnClose}" VerticalOptions="End" 
                     WidthRequest="300" HeightRequest="80" FontSize="35"
-                    BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+                    BackgroundColor="White" TextColor="#062026" BorderColor="Black" BorderWidth="2"/>
         </Grid>
         
         

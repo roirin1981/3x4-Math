@@ -135,6 +135,21 @@
   <data name="cancel" xml:space="preserve">
     <value>Cancel·lar</value>
   </data>
+  <data name="comprobar_" xml:space="preserve">
+    <value>Comprovar</value>
+  </data>
+  <data name="correctamente_" xml:space="preserve">
+    <value>Correctament.</value>
+  </data>
+  <data name="eliminateDB_" xml:space="preserve">
+    <value>Eliminada base de dades</value>
+  </data>
+  <data name="eliminateScore_" xml:space="preserve">
+    <value>Eliminada les puntuacions</value>
+  </data>
+  <data name="error_" xml:space="preserve">
+    <value>Error.</value>
+  </data>
   <data name="fallos_" xml:space="preserve">
     <value>Errades</value>
   </data>
@@ -169,7 +184,7 @@
     <value>Principal</value>
   </data>
   <data name="menuLanguagePreferencias" xml:space="preserve">
-    <value>Ajustos</value>
+    <value>Preferències</value>
   </data>
   <data name="menuPreferencias" xml:space="preserve">
     <value>Administració</value>
@@ -191,5 +206,11 @@
   </data>
   <data name="puntuation" xml:space="preserve">
     <value>Puntuació</value>
+  </data>
+  <data name="tablesSeleccionades" xml:space="preserve">
+    <value>Taules seleccionades</value>
+  </data>
+  <data name="table_" xml:space="preserve">
+    <value>Taula</value>
   </data>
 </root>

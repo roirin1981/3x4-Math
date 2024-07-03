@@ -22,13 +22,13 @@
         <!--<Picker Grid.Row="0" Grid.Column="1" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}"
                 ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Language}"/>-->
 
-        <ur:PickerField Margin="10,10,10,0" Grid.Row="0" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}" TitleColor="Black"
+        <ur:PickerField  Margin="10,10,10,0" Grid.Row="0" Title="{helpers:Translate lblSelectLanguage}" ItemsSource="{Binding Languages}" TitleColor="Black"
 Icon="{StaticResource ArrowDownBoldCircle}" ItemDisplayBinding="{Binding Name}" AllowClear="False" SelectedItem="{Binding Language}" TextColor="Black"/>
 
         <ur:PickerField Margin="10,10,10,0" Grid.Row="1" Title="{helpers:Translate lblMultiMax}" ItemsSource="{Binding Items}" TitleColor="Black"
      Icon="{StaticResource ArrowDownBoldCircle}" AllowClear="False" SelectedItem="{Binding SelectedItem}" TextColor="Black"/>
 
-        <Label Grid.Row="2" Margin="10,20,10,0" HorizontalTextAlignment="Start" Text="Tablas Seleccionadas" VerticalOptions="Center"/>
+        <Label Grid.Row="2" Margin="10,20,10,0" HorizontalTextAlignment="Start" Text="{helpers:Translate tablesSeleccionades}" VerticalOptions="Center"/>
         <Frame Margin="10,0,10,0" StyleClass="PrimaryContainer" Grid.Row="3" BackgroundColor="#DEF0FF" >
             <CollectionView Margin="0,0,0,0" ItemsSource="{Binding Tables2}" 
             Grid.Row="1"            

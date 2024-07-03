@@ -16,20 +16,20 @@
         
     </ContentPage.Resources>
 
-    <Grid Padding="0,40,0,0" HorizontalOptions="Center" RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto" RowSpacing="30">
+    <Grid Padding="0,40,0,0" HorizontalOptions="Center" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto" RowSpacing="30">
         
 
-        <Button Grid.Row="0" Grid.Column="0"                     
+        <!--<Button Grid.Row="0" Grid.Column="0"                     
             Command="{Binding ListadoPesosCommand}" Text="{helpers:Translate lblListPesos}" FontSize="15"
             VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource ListBoxOutline}"
-                BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
+                BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>-->
 
-        <Button Grid.Row="1" Grid.Column="0"                     
+        <Button Grid.Row="0" Grid.Column="0"                     
                     Command="{Binding ClearScoreCommand}" Text="{helpers:Translate lblDeleteScore}" FontSize="15"
                     VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource DeleteCircleOutline}"
                 BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>
         
-        <Button Grid.Row="2" Grid.Column="0"                     
+        <Button Grid.Row="1" Grid.Column="0"                     
                 Command="{Binding DeleteDatabaseCommand}" Text="{helpers:Translate lblDeleteDataBase}" FontSize="15"
                 VerticalOptions="End" WidthRequest="300" HeightRequest="80" ImageSource="{StaticResource DeleteCircleOutline}"
                 BackgroundColor="#5cb8ff" TextColor="#062026" BorderColor="LightGray" BorderWidth="2"/>

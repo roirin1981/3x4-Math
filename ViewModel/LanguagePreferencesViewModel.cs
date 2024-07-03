@@ -19,6 +19,7 @@ public partial class LanguagePreferencesViewModel : ObservableObject
     {
         try
         {
+            string _tabla = (string)Helpers.LocalizationResourceManager.Instance["table_"];
             SelectedItem = Convert.ToString(App.SettingsSvc.NumQuestions);
             Language = Config.GetCultureByKey(App.SettingsSvc.Language);
 
@@ -28,7 +29,7 @@ public partial class LanguagePreferencesViewModel : ObservableObject
             {
                 Tables2.Add(new TableItem()
                 {
-                    Name = $"Tabla {i}",
+                    Name = $"{_tabla} {i}",
                     Id = i,
                     IsChecked = App.SettingsSvc[i]
                 });
@@ -74,7 +75,7 @@ public partial class LanguagePreferencesViewModel : ObservableObject
     String[] items = new string[] { "5", "10", "20", "30", "40" };
 
     [ObservableProperty]
-    String selectedItem = "30";
+    String selectedItem = "10";
 
     partial void OnSelectedItemChanged(string value)
     {
